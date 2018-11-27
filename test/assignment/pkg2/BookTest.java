@@ -33,7 +33,7 @@ public class BookTest {
     
     @Before
     public void setUp() {
-     validBook = new Book("Sukhpreet" , "Kaur", "Cites & sourses","English",LocalDate.of(2018, Month.NOVEMBER, 10),10001);
+     validBook = new Book("Sukhpreet" , "Kaur", "Cites & sourses","English",LocalDate.of(2018, Month.NOVEMBER, 10),10001,"Java");
     }
     @After
     public void tearDown() {
@@ -198,6 +198,30 @@ public class BookTest {
             System.out.println(e);
         }
     }
+     @Test
+    public void testGetCourseName()
+    {
+        String expResult = "Java";
+        String result = validBook.getCourseName();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setCourseName method, of class Course.
+     */
+    @Test
+    public void testSetCourseNameInvalid()
+    {
+        String courseName = "";
+        try{
+            validBook.setCourseName(courseName);
+            fail("The course name cannot be empty");
+        }
+        catch (IllegalArgumentException e)
+        {
+            System.out.println(e);
+        }
+    }
    @Test
     public void testGetStudentNum()
     {
@@ -209,7 +233,7 @@ public class BookTest {
     public void testInvalidStudentNumber()
     {
         try{
-         validBook = new Book("Sukhpreet" , "Kaur", "Cites & sourses","English",LocalDate.of(2018, Month.NOVEMBER, 10),-10001);
+         validBook = new Book("Sukhpreet" , "Kaur", "Cites & sourses","English",LocalDate.of(2018, Month.NOVEMBER, 10),-10001,"Java");
             fail("-1 is not a valid student number and should be caught");
         }
         catch (IllegalArgumentException e)
