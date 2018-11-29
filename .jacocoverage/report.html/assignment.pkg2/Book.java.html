@@ -9,138 +9,104 @@ import java.time.LocalDate;
 
 /**
  *
- * @author Sukhpreet Kaur
- * Student number 200395997
+ * @author Acer
  */
 public class Book {
-    
     /*
-    *declare Instance variables 
+    declare Instance variables 
     */
-    
     private String studentFirstName,studentLastName, bookName, bookLanguage,courseName;
     private LocalDate reserveDate;
     private int studentNum; 
-    
     /*
-    * Constrctor for the instance variables 
+    Constrctor for the instance variables 
     */
-    
-<span class="fc" id="L29">    public Book(String studentFirstName, String studentLastName, String bookName, String bookLanguage, LocalDate reserveDate, int studentNum, String courseName) {</span>
-<span class="fc" id="L30">        setStudentFirstName(studentFirstName);</span>
-<span class="fc" id="L31">        setStudentLastName(studentLastName);</span>
-<span class="fc" id="L32">        setBookName(bookName);</span>
-<span class="fc" id="L33">        setBookLanguage(bookLanguage);  </span>
-<span class="fc" id="L34">        setReserveDate(reserveDate);</span>
-<span class="fc" id="L35">        setCourseName(courseName);</span>
-<span class="fc" id="L36">        setStudentNum(studentNum);</span>
-<span class="fc" id="L37">    }</span>
-    
-    /*
-    * get and set method for the firstname
-    */
-    
+<span class="fc" id="L24">    public Book(String studentFirstName, String studentLastName, String bookName, String bookLanguage, LocalDate reserveDate, int studentNum, String courseName) {</span>
+<span class="fc" id="L25">        setStudentFirstName(studentFirstName);</span>
+<span class="fc" id="L26">        setStudentLastName(studentLastName);</span>
+<span class="fc" id="L27">        setBookName(bookName);</span>
+<span class="fc" id="L28">        setBookLanguage(bookLanguage);  </span>
+<span class="fc" id="L29">        setReserveDate(reserveDate);</span>
+<span class="fc" id="L30">        setCourseName(courseName);</span>
+<span class="fc" id="L31">        setStudentNum(studentNum);</span>
+<span class="fc" id="L32">    }</span>
+
     public String getStudentFirstName() {
-<span class="fc" id="L44">        return studentFirstName;</span>
+<span class="fc" id="L35">        return studentFirstName;</span>
     }
 
     public void setStudentFirstName(String studentFirstName) {
-<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (studentFirstName.matches(&quot;[A-Z][a-z]*&quot;))</span>
-<span class="fc" id="L49">            this.studentFirstName = studentFirstName;</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        if (studentFirstName.matches(&quot;[A-Z][a-z]*&quot;))</span>
+<span class="fc" id="L40">            this.studentFirstName = studentFirstName;</span>
         else
-<span class="fc" id="L51">            throw new IllegalArgumentException(&quot; student first name must start with an upper case letter&quot;);</span>
-<span class="fc" id="L52">    }</span>
-    
-    /*
-    * get and set mehod for lastname
-    */
-    
+<span class="nc" id="L42">            throw new IllegalArgumentException(&quot; student first name must start with an upper case letter&quot;);</span>
+<span class="fc" id="L43">    }</span>
+
     public String getStudentLastName() {
-<span class="fc" id="L59">        return studentLastName;</span>
+<span class="fc" id="L46">        return studentLastName;</span>
     }
 
     public void setStudentLastName(String studentLastName) {
-<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (studentLastName.matches(&quot;[A-Z][a-z]*&quot;))</span>
-<span class="fc" id="L64">            this.studentLastName = studentLastName;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        if (studentLastName.matches(&quot;[A-Z][a-z]*&quot;))</span>
+<span class="fc" id="L51">            this.studentLastName = studentLastName;</span>
         else
-<span class="fc" id="L66">            throw new IllegalArgumentException(&quot; student last name must start with an upper case letter&quot;);</span>
-<span class="fc" id="L67">    }</span>
+<span class="fc" id="L53">            throw new IllegalArgumentException(&quot; student last name must start with an upper case letter&quot;);</span>
+<span class="fc" id="L54">    }</span>
 
-    /*
-    * get and set method for bookname
-    */
-    
     public String getBookName() {
-<span class="fc" id="L74">        return bookName;</span>
+<span class="fc" id="L57">        return bookName;</span>
     }
 
     public void setBookName(String bookName) {
-<span class="fc bfc" id="L78" title="All 2 branches covered.">        if(!bookName.isEmpty())</span>
-<span class="fc" id="L79">            this.bookName = bookName;</span>
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">        if(!bookName.isEmpty())</span>
+<span class="fc" id="L62">            this.bookName = bookName;</span>
         else 
-<span class="fc" id="L81">            throw new IllegalArgumentException(&quot;Book name should not be empty&quot;);</span>
-<span class="fc" id="L82">    }</span>
+<span class="nc" id="L64">            throw new IllegalArgumentException(&quot;Book name should not be empty&quot;);</span>
+<span class="fc" id="L65">    }</span>
 
-    /*
-    * get and set method  for language of book  
-    */
     public String getBookLanguage() {
-<span class="fc" id="L88">        return bookLanguage;</span>
+<span class="fc" id="L68">        return bookLanguage;</span>
     }
 
     public void setBookLanguage(String bookLanguage) {
-<span class="fc bfc" id="L92" title="All 2 branches covered.">        if(!bookLanguage.isEmpty())</span>
-    //    if (!bookLanguage.matches(&quot;[English][Punjabi][Hindi][French]*&quot;))
-<span class="fc" id="L94">           this.bookLanguage = bookLanguage;</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">        if (!bookLanguage.matches(&quot;[English][Punjabi][Hindi][French]*&quot;))</span>
+<span class="fc" id="L73">           this.bookLanguage = bookLanguage;</span>
         else
-<span class="fc" id="L96">            throw new IllegalArgumentException(&quot;Book language should not be empty&quot;);</span>
-<span class="fc" id="L97">    }</span>
-    /**
-     * get and set method for reservation of a date in future
-     * @return 
-     */
+<span class="nc" id="L75">            throw new IllegalArgumentException(&quot;Book language should match to given languages&quot;);</span>
+<span class="fc" id="L76">    }</span>
     
     public LocalDate getReserveDate() {
-<span class="fc" id="L104">        return reserveDate;</span>
+<span class="fc" id="L79">        return reserveDate;</span>
     }
 
     public void setReserveDate(LocalDate reserveDate) {
-<span class="fc bfc" id="L108" title="All 2 branches covered.">        if(reserveDate.isAfter(LocalDate.now()))</span>
-<span class="fc" id="L109">            throw new IllegalArgumentException(&quot;resreve date should be matches to the given validation&quot;); </span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if(reserveDate.isAfter(LocalDate.now()))</span>
+<span class="fc" id="L84">            throw new IllegalArgumentException(&quot;resreve date should be matches to the given validation&quot;); </span>
         else
-<span class="fc" id="L111">               this.reserveDate = reserveDate;</span>
-<span class="fc" id="L112">    }</span>
-    
-    /**
-     * get and set name for course name
-     * @return 
-     */
+<span class="fc" id="L86">               this.reserveDate = reserveDate;</span>
+<span class="fc" id="L87">    }</span>
 
     public String getCourseName() {
-<span class="fc" id="L120">        return courseName;</span>
+<span class="fc" id="L90">        return courseName;</span>
     }
 
     public void setCourseName(String courseName) {
-<span class="fc bfc" id="L124" title="All 2 branches covered.">        if(!courseName.isEmpty())</span>
-<span class="fc" id="L125">            this.courseName = courseName;</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        if(!courseName.isEmpty())</span>
+<span class="fc" id="L95">            this.courseName = courseName;</span>
         else
-<span class="fc" id="L127">            throw new IllegalArgumentException(&quot;course name should not be empty&quot;);  </span>
-<span class="fc" id="L128">    }</span>
+<span class="fc" id="L97">            throw new IllegalArgumentException(&quot;course name should not be empty&quot;);  </span>
+<span class="fc" id="L98">    }</span>
     
-    /**
-     * get and set method for  student  number of a student
-     * @return 
-     */
     
     public int getStudentNum() {
-<span class="fc" id="L136">        return studentNum;</span>
+<span class="fc" id="L102">        return studentNum;</span>
     }
 
     public void setStudentNum(int studentNum) {
-<span class="fc bfc" id="L140" title="All 2 branches covered.">      if(studentNum &gt; 0)</span>
-<span class="fc" id="L141">            this.studentNum = studentNum;</span>
+<span class="fc bfc" id="L106" title="All 2 branches covered.">      if(studentNum &gt; 0)</span>
+<span class="fc" id="L107">            this.studentNum = studentNum;</span>
         else
-<span class="fc" id="L143">            throw new IllegalArgumentException(&quot;Student number cannot be less than 0&quot;);</span>
-<span class="fc" id="L144">    }</span>
+<span class="fc" id="L109">            throw new IllegalArgumentException(&quot;Student number cannot be less than 0&quot;);</span>
+<span class="fc" id="L110">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

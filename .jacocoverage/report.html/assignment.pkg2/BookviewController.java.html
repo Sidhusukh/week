@@ -12,14 +12,13 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
  *
  * @author Acer
  */
-<span class="nc" id="L22">public class BookviewController implements Initializable {</span>
+<span class="nc" id="L21">public class BookviewController implements Initializable {</span>
   @FXML
     private TextField FirstNametextfield;
 
@@ -53,42 +52,24 @@ import javafx.scene.image.ImageView;
     @FXML
     private TextField booknametext;
       
-    @FXML
-    private ImageView imageview;
-    
     private ToggleGroup languageToggleGroup;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-<span class="nc" id="L63">        courseNameCombobox.setPromptText(&quot;choose Course &quot;);</span>
-<span class="nc" id="L64">        courseNameCombobox.getItems().add(&quot;Java&quot;);</span>
-<span class="nc" id="L65">        courseNameCombobox.getItems().add(&quot;Web Desgning&quot;);</span>
-<span class="nc" id="L66">        courseNameCombobox.getItems().add(&quot;Math&quot;);</span>
-<span class="nc" id="L67">        courseNameCombobox.getItems().add(&quot;Communication Essential&quot;);</span>
-<span class="nc" id="L68">        courseNameCombobox.getItems().add(&quot;Relational Database&quot;);</span>
-<span class="nc" id="L69">        courseNameCombobox.getItems().add(&quot;English&quot;);</span>
+<span class="nc" id="L59">        courseNameCombobox.setPromptText(&quot;choose Course &quot;);</span>
+<span class="nc" id="L60">        courseNameCombobox.getItems().add(&quot;Java&quot;);</span>
+<span class="nc" id="L61">        courseNameCombobox.getItems().add(&quot;Web Desgning&quot;);</span>
+<span class="nc" id="L62">        courseNameCombobox.getItems().add(&quot;Math&quot;);</span>
+<span class="nc" id="L63">        courseNameCombobox.getItems().add(&quot;Communication Essential&quot;);</span>
+<span class="nc" id="L64">        courseNameCombobox.getItems().add(&quot;Relational Database&quot;);</span>
+<span class="nc" id="L65">        courseNameCombobox.getItems().add(&quot;English&quot;);</span>
         
-<span class="nc" id="L71">        languageToggleGroup = new ToggleGroup();</span>
-<span class="nc" id="L72">        this.englishRadioButton.setToggleGroup(languageToggleGroup);</span>
-<span class="nc" id="L73">        this.punjabiRadioButton.setToggleGroup(languageToggleGroup);</span>
-<span class="nc" id="L74">        this.hindiRadioButton.setToggleGroup(languageToggleGroup);</span>
-<span class="nc" id="L75">        this.frenchRadioButton.setToggleGroup(languageToggleGroup);</span>
-        
-        
-//         if(englishRadioButton.setToggleGroup.equalsIgnoreCase(&quot;English&quot;))
-//            imageview.setImage(new Image(&quot;./image/english book.jpg&quot;));
-//        
-//        else if(punjabiRadioButton.equalsIgnoreCase(&quot;Punjabi&quot;))
-//            imageview.setImage(new Image(&quot;./image/punjabi.jpg&quot;));
-//        
-//         else if(hindiRadioButton.getValue().equalsIgnoreCase(&quot;hindi&quot;))
-//            imageview.setImage(new Image(&quot;./image/hindi.jpg&quot;));
-//            
-//         else if(frenchRadioButton.getValue().equalsIgnoreCase(&quot;French&quot;))
-//            imageview.setImage(new Image(&quot;./image/french.jpg&quot;));
-        
-        
-<span class="nc" id="L91">    }  </span>
+<span class="nc" id="L67">        languageToggleGroup = new ToggleGroup();</span>
+<span class="nc" id="L68">        this.englishRadioButton.setToggleGroup(languageToggleGroup);</span>
+<span class="nc" id="L69">        this.punjabiRadioButton.setToggleGroup(languageToggleGroup);</span>
+<span class="nc" id="L70">        this.hindiRadioButton.setToggleGroup(languageToggleGroup);</span>
+<span class="nc" id="L71">        this.frenchRadioButton.setToggleGroup(languageToggleGroup);</span>
+<span class="nc" id="L72">    }  </span>
   
    
 
@@ -100,6 +81,16 @@ import javafx.scene.image.ImageView;
 //    frenchRadioButton.add(French);
 
 
-       
+//        if(englishRadioButton.getValue.equalsIgnoreCase(&quot;English&quot;))
+//            imageview.setImage(new Image(&quot;./image/english book.jpg&quot;));
+//        
+//        else if(punjabiRadioButton.getValue().equalsIgnoreCase(&quot;Punjabi&quot;))
+//            imageview.setImage(new Image(&quot;./image/punjabi.jpg&quot;));
+//        
+//         else (hindiRadioButton.getValue().equalsIgnoreCase(&quot;hindi&quot;))
+//            imageview.setImage(new Image(&quot;./image/hindi.jpg&quot;));
+//            
+//         else (frenchRadioButton.getValue().equalsIgnoreCase(&quot;French&quot;))
+//            imageview.setImage(new Image(&quot;./image/french.jpg&quot;));
     }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

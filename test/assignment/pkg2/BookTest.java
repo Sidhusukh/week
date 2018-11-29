@@ -19,9 +19,7 @@ import static org.junit.Assert.*;
  * @author Acer
  */
 public class BookTest {
-    
     Book validBook;
-    
     public BookTest() {
     }
     
@@ -64,24 +62,9 @@ public class BookTest {
         assertEquals("Sukhpreet",result);        
     }
   
-      @Test
-    public void testsetStudentFirstNameInvalid()
-    {
-        String studentfirstName = "";
-        try{
-            validBook.setStudentFirstName(studentfirstName);
-            fail("The first name cannot be empty");
-        }
-        catch (IllegalArgumentException e)
-        {
-            System.out.println(e);
-        }
-    }    
-    
     /**
      * Test of getLastName method, of class Student.
      */
-    
     @Test
     public void testGetStudentLastName()
     {
@@ -93,7 +76,6 @@ public class BookTest {
     /**
      * Test of setLastName method, of class Student.
      */
-    
     @Test
     public void testSetStudentLastName()
     {
@@ -104,7 +86,6 @@ public class BookTest {
     /**
      * Test of setLastName method, of class Student.
      */
-    
     @Test
     public void testSetStudentLastNameInvalid()
     {
@@ -119,8 +100,7 @@ public class BookTest {
             System.out.println(e);
         }
     }
-    
-    @Test
+  @Test
     public void testGetBookName()
     {
         String expResult = "Cites & sourses";
@@ -140,25 +120,9 @@ public class BookTest {
         assertEquals("Cites & sourses",result);        
     }
    
-     @Test
-    public void testSetBookNameInvalid()
-    {
-        String BookName = "";
-        try
-        {
-            validBook.setBookName(BookName);
-            fail("The setbookname method with an empty argument should have triggered an exception.");
-        }
-        catch (IllegalArgumentException e)
-        {
-            System.out.println(e);
-        }
-    }
-    
     /**
      * Test of getBookLanguage method, of class Book.
      */
-    
     @Test
     public void testGetBookLanguage()
     {
@@ -166,77 +130,38 @@ public class BookTest {
         String result = validBook.getBookLanguage();
         assertEquals(expResult, result);
     }
-    
-     @Test
-    public void testSetBookLanguage()
-    {
-        validBook.setBookLanguage("Cites & sourses");
-        String result = validBook.getBookLanguage();
-        assertEquals("Cites & sourses",result);        
-    }
-    
-    @Test
-    public void testSetBookLanguageInvalid()
-    {
-        String BookLanguage = "";
-        try
-        {
-            validBook.setBookLanguage(BookLanguage);
-            fail("The setbookname method with an empty argument should have triggered an exception.");
-        }
-        catch (IllegalArgumentException e)
-        {
-            System.out.println(e);
-        }
-    }
+
     /**
-//     * Test of setBookLanguage method, of class Book.
-//     */
-//     @Test
-//    public void testSetBookLanguageEnglish()
-//    {
-//        String result = "English";
-//        validBook.setBookLanguage("English");
-//        assertEquals(result, validBook.getBookLanguage());
-//    }
-//    
-//    @Test
-//    public void testSetBookLanguagePunjabi()
-//    {
-//        String result = "Punjabi";
-//        validBook.setBookLanguage("Punjabi");
-//        assertEquals(result, validBook.getBookLanguage());
-//    }
-//     @Test
-//    public void testSetBookLanguageHindi()
-//    {
-//        String result = "Hindi";
-//        validBook.setBookLanguage("Hindi");
-//        assertEquals(result, validBook.getBookLanguage());
-//    }
-//     @Test
-//    public void testSetBookLanguageFrench()
-//    {
-//        String result = "French";
-//        validBook.setBookLanguage("French");
-//        assertEquals(result, validBook.getBookLanguage());
-//    }
-//     
-//     @Test
-//    public void testSetBookLanguageInvalid()
-//    {
-//        String bookLanguage = "";
-//        try
-//        {
-//            validBook.setBookLanguage(bookLanguage);
-//            fail("The setbook language method with an empty argument should have triggered an exception.");
-//        }
-//        catch (IllegalArgumentException e)
-//        {
-//            System.out.println(e);
-//        }
-//    }
-//    
+     * Test of setBookLanguage method, of class Book.
+     */
+     @Test
+    public void testSeBookLanguageEnglish()
+    {
+        String result = "English";
+        validBook.setBookLanguage("English");
+        assertEquals(result, validBook.getBookLanguage());
+    }
+   @Test
+    public void testSeBookLanguagePunjabi()
+    {
+        String result = "Punjabi";
+        validBook.setBookLanguage("Punjabi");
+        assertEquals(result, validBook.getBookLanguage());
+    }
+     @Test
+    public void testSeBookLanguageHindi()
+    {
+        String result = "Hindi";
+        validBook.setBookLanguage("Hindi");
+        assertEquals(result, validBook.getBookLanguage());
+    }
+     @Test
+    public void testSeBookLanguageFrench()
+    {
+        String result = "French";
+        validBook.setBookLanguage("French");
+        assertEquals(result, validBook.getBookLanguage());
+    }
     @Test
     public void testGetReserveDate()
     {
@@ -248,7 +173,6 @@ public class BookTest {
     /**
      * Test of setDateEnrolled method, of class Student.
      */
-    
     @Test
     public void testSetReserveDate()
     {
@@ -261,7 +185,6 @@ public class BookTest {
     /**
      * Test of setDateEnrolled method, of class Student.
      */
-    
     @Test
     public void testSetReserveDateInvalid()
     {
@@ -286,7 +209,6 @@ public class BookTest {
     /**
      * Test of setCourseName method, of class Course.
      */
-    
     @Test
     public void testSetCourseNameInvalid()
     {
@@ -307,8 +229,7 @@ public class BookTest {
         int result = validBook.getStudentNum();
         assertEquals(expResult, result);
     }
-    
-    @Test
+      @Test
     public void testInvalidStudentNumber()
     {
         try{
@@ -320,7 +241,6 @@ public class BookTest {
             System.out.println(e);
         }
     }
-    
     
     
 }
